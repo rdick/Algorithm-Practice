@@ -19,3 +19,38 @@ var moveZeroes = function(nums) {
         
     }
 };
+
+var moveZeroes = function(nums) {
+    
+    let start = 0
+    let count = 0
+    
+    for(let i = 0; i < nums.length; i ++){
+        if(nums[i] != 0){
+            nums[start] = nums[i]
+            start ++
+        } else {
+            count ++
+        }
+    }
+    for(let i = nums.length-count; i < nums.length; i++ ){
+    // console.log(i, count, count<i)
+        
+        nums[i] = 0
+    }
+    return nums
+};
+
+// const bst = (isBadVersion, L, R) => {
+//     const mid = Math.floor((L+R)/2)
+    
+    
+//     const badVersion = isBadVersion(mid)
+//     console.log(mid)
+//     if(badVersion && !isBadVersion(mid-1)){
+//         return mid
+//     }
+//     if(badVersion) return bst(isBadVersion, L, mid)  
+//     if(!badVersion && isBadVersion(mid+1)) return mid+1
+//     if(!badVersion) return bst(isBadVersion, mid, R)
+// }
