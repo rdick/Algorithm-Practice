@@ -18,7 +18,9 @@ var subsets = function(nums) {
 
 
 // STATEMENT 1
-// Every student eats every menu item - everytime each student eats a meal they recieve a like
+// Statement: Every CPSC 121 student eats every item on the all you can eat sushi menu if and only if each student eat one item that student gets a like
+
+// Everytime each student eats a meal they recieve a like
 
 for(let student = 0; student < AllStudents.length; student++) {
     for(let meal = 0; meal < AllItemsOnMenu.length; meal++) {
@@ -29,7 +31,9 @@ for(let student = 0; student < AllStudents.length; student++) {
 Likes = total students X total meal options
 
 // STATEMENT 2
-// Every student eats every menu item - everytime a student finishes eating the whole menu that student recieves a like
+// Statement: Every CPSC 121 student eats every item on the all you can eat sushi menu if and only if a student eats the entire menu they get a like
+
+// Everytime a student finishes eating the whole menu that student recieves a like
 
 for(let student = 0; student < AllStudents.length; student++) {
         student eats AllItemsOnMenu <=> recieve 1 Like
@@ -39,7 +43,9 @@ Likes   = total students X Menu
         = total students X 1
 
 // STATEMENT 3
-// Every student eats every menu item  - When all students eat all menu items they recieve 1 like
+// Statement: Every CPSC 121 student eats every item on the all you can eat sushi menu if and only if all students eat the whole menu you receive a like
+
+// When all students eat all menu items they recieve 1 like
 
 All Students Eat All Menu Items <=> Receive 1 Like
 
