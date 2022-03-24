@@ -1,0 +1,33 @@
+/**
+ * @param {number} num
+ * @return {number}
+ */
+var maximumSwap = function(num) {
+    let numsArray = Array.from(`${num}`,Number)
+    
+    let hash = {}
+    for(let i = 0; i < numsArray.length; i++){
+            hash[numsArray[i]] = i
+    }
+    
+    let pq = []
+    for(let numerals in hash){
+        pq.push([parseInt(numerals), hash[numerals]])
+    }
+    pq.sort((a,b) => b[0] - a[0])
+    
+    for(let i = 0; i < numsArray.length; i++){
+        for(let j = 0; j < pq.length; j++){
+            const pqIndex = pq[j][1]
+            const pqValue = pq[j][0]
+
+            if( pqValue > numsArray[i] && pqIndex > i) {
+                [numsArray[pqIndex], numsArray[i]] = [numsArray[i], numsArray[pqIndex]];
+                return parseInt(numsArray.join(''))
+            } else if (pq[j][0] <= numsArray[i]) {
+                break
+            }
+        }
+    }
+    return num
+};
